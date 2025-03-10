@@ -1,0 +1,72 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class EyeTrackingActivation : MonoBehaviour
+{
+    public float fixationTime = 5f; // Temps avant activation
+    private float gazeTimer = 0f;
+    private bool isPlaying = false;
+
+    public Transform gazeTarget; // L'objet à regarder (Cube)
+
+    private Animator anim;
+
+    void Start()
+    {
+        if (gazeTarget != null)
+            anim = gazeTarget.GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        if (IsLookingAtTarget())
+        {
+            gazeTimer += Time.deltaTime;
+            Debug.Log("Regarde l'objet: " + gazeTimer); // ✅ Vérifie dans la console si ça s'incrémente
+
+            if (gazeTimer >= fixationTime)
+            {
+                Debug.Log("Animation Succesful !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                ActivateAnimation();
+                gazeTimer = 0f; // Reset gazeTimer
+                isPlaying = true;
+                StartCoroutine(ReturnToIdle());
+            }
+        }
+        else
+        {
+            gazeTimer = 0f;
+        }
+    }
+
+    private bool IsLookingAtTarget()
+    {
+        Vector3 direction = gazeTarget.position - Camera.main.transform.position;
+        direction.Normalize();
+        float dot = Vector3.Dot(Camera.main.transform.forward, direction);
+
+        Debug.Log("Angle de regard: " + dot); // ✅ Vérifie dans la console si le regard est bien détecté
+
+        return dot > 0.95f; // L'objet est bien dans l'axe de vision
+    }
+
+    private void ActivateAnimation()
+    {
+        if (anim != null)
+        {
+            Debug.Log("Animation activée !");
+            anim.SetTrigger("Activate");
+        }
+        else
+        {
+            Debug.LogWarning("Aucun Animator trouvé sur l'objet !");
+        }
+    }
+
+    private IEnumerator ReturnToIdle()
+    {
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        anim.Play("Idle");
+        isPlaying = false;
+    }
+}
