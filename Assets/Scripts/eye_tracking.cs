@@ -12,6 +12,12 @@ public class EyeTrackingActivation : MonoBehaviour
 
     private Animator anim;
 
+    public int distOfRay = 10;
+    private RaycastHit _hit;
+
+    //TODO: paring the obj and Anim
+    // private Dictionary<GameObject, Animator> objectAnimators = new Dictionary<GameObject, Animator>();
+
     void Start()
     {
         if (gazeTarget != null)
@@ -27,11 +33,14 @@ public class EyeTrackingActivation : MonoBehaviour
 
             if (gazeTimer >= fixationTime)
             {
-                Debug.Log("Animation Succesful !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                Debug.Log("=================Anim Success=================");
                 ActivateAnimation();
                 gazeTimer = 0f; // Reset gazeTimer
                 isPlaying = true;
                 StartCoroutine(ReturnToIdle());
+
+                Debug.Log("******************Teleport Success******************");
+                _hit.transform.gameObject.GetComponent<Teleport>().TeleportPlayer();
             }
         }
         else
@@ -42,6 +51,7 @@ public class EyeTrackingActivation : MonoBehaviour
 
     private bool IsLookingAtTarget()
     {
+        //TODO/ replace it with 'raycast detection' (in order to work on multiple objects EyeTracking)
         Vector3 direction = gazeTarget.position - Camera.main.transform.position;
         direction.Normalize();
         float dot = Vector3.Dot(Camera.main.transform.forward, direction);

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HelpObject
   - SamplesInfoPanel
+  - Teleport
   layers:
   - Default
   - TransparentFX
