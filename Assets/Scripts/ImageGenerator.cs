@@ -9,7 +9,7 @@ public class ImageGenerator : MonoBehaviour
     public List<Renderer> cubeRenderers;
     private float interval = 1.2f;
     private string apiUrl = "https://api.openai.com/v1/images/generations"; // Corrected URL
-    private string apiKey = "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";
+    private string apiKey = "";
     private Dictionary<int, string> prompts = new Dictionary<int, string>()
         {
             { 0, "Create a surrealist poster combining both image and Dadaist fake news text. The image must depict fear and paranoia: melting humanoid shadows, clocks with sharp teeth, twisted buildings, and crimson fog rolling across a decaying cityscape. Lighting should be high-contrast and dramatic, casting warped shadows. Overlay a short, absurd, and disturbing fake news headline in the style of Dada poetry—nonlinear, nonsensical, unsettling. Suggested example: “Midnight screams elected mayor as clocks demand sacrifice.”Use torn or jittery typography that blends with the image. Avoid photorealism, symmetry, smiling faces, or calm scenery." }, //afraid
