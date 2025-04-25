@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/ORCHID_les_infos.unity
+    guid: 8e451f610570bae41901079ab4ba071e
+  - enabled: 0
+    path: Assets/Scenes/ORCHID_subsceneNEWS.unity
+    guid: 9a412d408e64d1649868fe8593e85823
+  - enabled: 1
+    path: Assets/Scenes/ORCHID_les_infos_option_2.unity
+    guid: 6b02c1249beabbe42ace77e63d8d3ff7
+  - enabled: 1
+    path: Assets/Scenes/ORCHID.unity
+    guid: fa03bd1615b47c14c938106c48ba81c9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a119f6f587e88314ebd5072fee8a96d6, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 74cf2e0dc6053ba449bfb92ecf215db6, type: 2}

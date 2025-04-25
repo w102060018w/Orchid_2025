@@ -29,7 +29,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _FinalTexture:
-        m_Texture: {fileID: 2800000, guid: 5a0fdfcc0531b1842ac9f1c6ea1d1645, type: 3}
+        m_Texture: {fileID: 2800000, guid: dfe3c1d52e756514e9e18a01700b7247, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -65,8 +65,8 @@ Material:
     - _CloseFadeEnabled: 1
     - _Distance: 4
     - _DistancePower: 4
-    - _FinalMaskMultiply: 2
-    - _FinalPower: 10
+    - _FinalMaskMultiply: 2.47
+    - _FinalPower: 3.1
     - _InvFade: 1
     - _LockYOffset: 1
     - _MaskAffectsTransparency: 0
@@ -79,8 +79,8 @@ Material:
     m_Colors:
     - _Affector: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _FinalColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
-    - _FinalColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _FinalColor: {r: 0.5707547, g: 0.62104285, b: 1, a: 1}
+    - _FinalColor2: {r: 0.21782662, g: 0.2276968, b: 0.5188679, a: 0}
     - _FinalUnlitColor: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 0, b: 0, a: 0.5}
     - _UnlitColor: {r: 0, g: 0, b: 0, a: 0}
