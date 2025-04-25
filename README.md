@@ -14,7 +14,8 @@ In *Intricate Memories*, the user—called the *Intriquant*—enters a symbolic 
 
 🧬 **Key Interactions:**
 - Scattered memory fragments appear and respond to gestures.
-- Glowing **glyphs** trigger scene transitions when looked at.
+- Able to play with **full-body** in VR **without any wearable tracking device**.
+- Glowing glyphs **trigger scene transitions when looked at** (with zero neccesity of using the VR controller).
 - A camera above captures the real body, projecting a "mental image" onto a celestial vault.
 
 ---
@@ -59,7 +60,7 @@ TBD...
 ---
 
 ## ✅ Accomplished
-- Full-body IK setup and avatar customization
+- Full-body IK setup and avatar customization 
 - Eye-gaze interaction system (glyphs, EXIT phone)
 - Scene-switching logic and visual transformation tracking
 - Audio coordination across transitions
@@ -88,11 +89,11 @@ TBD...
 - Triggers glyph activation and scene transitions.
 
 ### 🧍 Body Tracking
-- Uses IK algorithms and upper body motion to infer full pose.
+- Uses IK algorithms and upper body motion to infer full pose via [Meta Movement SDK](https://github.com/oculus-samples/Unity-Movement).
 - Adapts the *Intriqué*’s form to reflect psychological transformations.
 
 ### 🗞 Fake News Generation
-- Six predefined prompts create real-time DALL·E images.
+- Six predefined prompts create real-time DALL·E images every 3.5 seconds.
 - Textures are applied to all renderers in the fake-news scene.
 
 ### 🎧 Audio Control & Synchronization
