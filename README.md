@@ -53,12 +53,6 @@ User must fix their gaze on a phone labeled "EXIT" to return to the base scene�
 
 ---
 
-## 📸 Screenshots / Videos
-TBD...
-<!-- > *(To be added in the repository folder `/media/` with links here)* -->
-
----
-
 ## ✅ Accomplished
 - Full-body IK setup and avatar customization 
 - Eye-gaze interaction system (glyphs, EXIT phone)
