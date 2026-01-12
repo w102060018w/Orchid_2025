@@ -1,6 +1,7 @@
 # 🧠 Intricate Memories
 
 **Intricate Memories** is an immersive VR installation exploring the relationship between memory, disinformation, and bodily perception. Built using Unity and TouchDesigner, this project blends real-time interaction, somatic storytelling, and speculative interfaces.
+**Publication** https://dl.acm.org/doi/10.1145/3714394.3756248
 
 ## 👥 Authors
 **Hui-Ting HONG**  
